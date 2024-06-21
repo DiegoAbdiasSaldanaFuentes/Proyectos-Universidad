@@ -91,6 +91,15 @@ def funcion_d(Datos):
     return muertes_piquero_12_feb_2023
 
 
+def funcion_d2(Datos):
+    muertes_gaviota_12_feb_2023 = 0
+    for gaviota_12 in Datos:
+        fecha = gaviota_12[0]
+        especie = gaviota_12[6]
+        if fecha == '12-02-2023' and especie == 'Gaviota garuma - (Larus modestus)':
+            muertes_gaviota_12_feb_2023 =  muertes_piquero_12_feb_2023 +  int(gaviota_12[7])
+    return muertes_gaviota_12_feb_2023
+
 # creamos el Def para si poder tener la "funcion_e"
 # creamos una nueva variable donde estara la lista de las especies que necesitaremos graficar
 # usaremos esta vez un diccionario donde sera ma s facil mostrar las muertes de las especies mencionada 
@@ -109,7 +118,27 @@ def funcion_e(Datos):
     return muertes_por_especie
 
 
+#para crear el grafico usaremos el ".bar" para que uselos datos de las muertes y nombre de especies luego le pondremos nombre a la grafica
+def grafica(grafico):
+    plt.bar(grafico.keys(), grafico.values())
+    plt.xlabel('Especies')
+    plt.ylabel('Número de muertes')
+    plt.title('Muertes de aves por especie')
+    plt.show()
 
+def genera_salida(pajaros_regiones, muertes_enero_2023, muertes_tagua_cartagena, muertes_gaviota_12_feb_2023):
+    sal = open('resultado.txt', 'w')
+    sal.write('Autores: Victor Farias - Diego Saldana'+'\n\n')
+    sal.write('cantidad de aves muertas por region:'+'\n\n')
+    for aves_reg in pajaros_regiones:
+        muertes = pajaros_regiones[aves_reg]
+        sal.write('Region: ' + aves_reg + ', Muertes: ' + str(muertes) + '\n')
+    
+    sal.write('Casos aves muertas mes de enero del ano 2023: '+ str(muertes_enero_2023)+'\n\n')
+    sal.write('En la comuna de Cartagena se detectaron '+str(muertes_tagua_cartagena)+' Taguas muertas'+'\n\n')
+    sal.write('Las muertes detectadas para el 12 de febrero del 2023 de la especie Gaviota garuma son: '+str(muertes_gaviota_12_feb_2023)+'\n\n')
+    sal.close()
+   
 
 
 
@@ -121,7 +150,10 @@ if __name__ == "__main__":
     muertes_enero_2023 = funcion_b (pajaros)
     muertes_tagua_cartagena = funcion_c (pajaros)
     muertes_piquero_12_feb_2023 = funcion_d (pajaros)
-    grafico = funcion_e (pajaros)
+    muertes_gaviota_12_feb_2023 = funcion_d2 (pajaros)
+    especies_muertas = funcion_e (pajaros)
+    grafica(especies_muertas)
+    genera_salida(pajaros_regiones, muertes_enero_2023, muertes_tagua_cartagena, muertes_gaviota_12_feb_2023)
     
-# printiamos la salida
-print(pajaros)
+# Generamos la salida
+print(genera_salida)
