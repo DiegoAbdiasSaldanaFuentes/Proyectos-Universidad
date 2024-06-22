@@ -5,12 +5,8 @@ import matplotlib.pyplot as plt
 
 
 
-# creamos  un Def para crear una función a la que llamaremos "lectura_datos" y creamos una variable llamada "archivo" que recibira informacion de la función.
-# tambien creamos la entrada o ent donde abrira el archivo que lo abre lectura_datos que abre "aves.txt" para poder abrir el texto.
-# seguimos con los Datos para crear la lista para  crear un for con una funcion llamada linea porque  for  ira line por linea en "ent".
-# al crear el for haremos que la funcion "linea" sea modife a si mismo para que haga un salto de linea al acabar la linea justo con split para separar los datos en las comas.
-# despues cerramos el archivo para evitar cualquier tipo de perdida de informacion.
 
+# al crear el for haremos que la funcion "linea" sea modife a si mismo para que haga un salto de linea al acabar la linea justo con split para separar los datos en las comas.
 def lectura_datos(archivo):
     ent = open(archivo) 
     Datos = []
@@ -22,13 +18,8 @@ def lectura_datos(archivo):
     return Datos
 
 
-# creamos un Def para la "funcion_a"
-# creamos la variable "aves_por_region" con cadenas  para evitar elementos repetidos o que la funcion tire error
-# creamos un for para la funcion "aves_por_region" que estara buscando en "Datos"
-# Luego creamo variables llamadas "region" y "muertes"   que son los elemntos que estan  en las posiciones [3] y [7] con la excepcion de que la posicion [7] le agregamos un Int al principio para que la funcion reconozca que la posicion [7] es un numero y no un string
-# creamos un if para poder decir que si hay una "region"  en "aves_por_region" que ya este osea se repite se sume si no es el caso no se suma osea se mantiene en 0, lo mismo pasa con las muertes con la excepcion de que debe sumarse todo
-# retornamos la funcion para que nos muestre el resutado
 
+#La funcion(a) indica las muertes totales por region.
 def funcion_a(Datos):
     aves_por_region = {}
     for aves_muertes_region in Datos:
@@ -39,13 +30,8 @@ def funcion_a(Datos):
         aves_por_region[region] = aves_por_region[region] + muertes
     return aves_por_region
 
-# creamos un Def para la "funcion_b"
-# hacemos un contador que comienze en 0 
-# creamos un for con la funcion llamada "muer_ener" osea muertes_enero simplificado, que busque en datos la fecha del mes y año
-# especificamos en donde  esta la posicion del mes y el año
-# creamos  un if  para decir si mes es igual a "01" y año es igual a "2023" para que busque en esas fechas si es asi muertes_enero2023 se sumara consigo mismo para sumar sus respectivas muertes
-# devolvemos la funcion para que nos muestre el resultado
 
+#La funcion(b) indica la cantidad de aves muertas para el mes de enero y el año 2023.
 def funcion_b(Datos):
     muertes_enero_2023 = 0
     for muer_ener in Datos:
@@ -57,12 +43,7 @@ def funcion_b(Datos):
     return muertes_enero_2023
 
 
-# creamos un def para la "funcion_c"
-# hacemos un contador que empieze en 0
-# creamos un for con la funcion llamada "taguacar" que simplifica tagua y cartagena
-# creamos una variable llamada "comuna" y "especie" detallando las pocisiones en las que  se encuentra
-# creamos un if que sume Cartagena si encuentra otro Cartagena, lo mismo aplica con Tagua y cuando lo haga que sume las muertes
-# al final que nos devuelva "Muertes_Tagua_Cartagena"
+#La funcion(c) indica la cantidad de muertes de la especie Tagua en la comuna de Cartagena.
 
 def funcion_c(Datos):
     muertes_tagua_cartagena = 0
@@ -74,13 +55,7 @@ def funcion_c(Datos):
     return muertes_tagua_cartagena
 
 
-# creamos un def  con la "funcion_d"
-# creamos un contador que empieze en 0 
-# creamos un for con la funcion llamada "pique_12" simplificando piquero y 12 de febrero
-# creamos variables llamadas fecha y especie con sus respectivas posiciones
-# creamos un if con las variablles fechas y especias las cuales deben ser iguales a la fecha entregada y a la especie osea piquero y cuando lo haga sume las muertes
-# finalmente retornamos "muertes_piquero_12_feb_2023"
-
+#La funcion(d) busca el numero de muertes de la especie Piquero en una fecha especifica(12/02/2023).
 def funcion_d(Datos):
     muertes_piquero_12_feb_2023 = 0
     for pique_12 in Datos:
@@ -90,6 +65,7 @@ def funcion_d(Datos):
             muertes_piquero_12_feb_2023 =  muertes_piquero_12_feb_2023 +  int(pique_12[7])
     return muertes_piquero_12_feb_2023
 
+#La funcion(d2) busca el numero de muertes de la especie Gaviota garuma en una fecha especifica(12/02/2023).
 
 def funcion_d2(Datos):
     muertes_gaviota_12_feb_2023 = 0
@@ -100,14 +76,8 @@ def funcion_d2(Datos):
             muertes_gaviota_12_feb_2023 =  muertes_piquero_12_feb_2023 +  int(gaviota_12[7])
     return muertes_gaviota_12_feb_2023
 
-# creamos el Def para si poder tener la "funcion_e"
-# creamos una nueva variable donde estara la lista de las especies que necesitaremos graficar
-# usaremos esta vez un diccionario donde sera ma s facil mostrar las muertes de las especies mencionada 
-# creamos un for con la funcion "especie_graf" que buscara en "Datos"
-# hacemos una variable "especie" que nos diga que las especies de aves.txt se encuentra en la posicion [6]
-# hacemos un if  donde usaremos la variable ya creada "especie" que use el diccionario "muertes_po_especie" que si "muertes_por_especie" en la variable especie es igual a esta miesma  se sume  y usando "and" sumaremos las muertes
-# finalmente retornamos "muertes_por_especie"
 
+# creamos una nueva variable donde estara la lista de las especies que necesitaremos graficar
 def funcion_e(Datos):
     especies_interes = ['Gaviota garuma - (Larus modestus)', 'Piquero - (Sula variegata)', 'Gaviota de Franklin - (Larus pipixcan)', 'Pelicano - (Pelecanus thagus)', 'Guanay - (Phalacrocorax bougainvillii)']
     muertes_por_especie = {especie: 0 for especie in especies_interes}
@@ -120,24 +90,28 @@ def funcion_e(Datos):
 
 #para crear el grafico usaremos el ".bar" para que uselos datos de las muertes y nombre de especies luego le pondremos nombre a la grafica
 def grafica(grafico):
+    plt.figure(figsize=(15,4))
     plt.bar(grafico.keys(), grafico.values())
     plt.xlabel('Especies')
     plt.ylabel('Número de muertes')
     plt.title('Muertes de aves por especie')
     plt.show()
 
+
+#creamos la salida de todas nuestras funciones
 def genera_salida(pajaros_regiones, muertes_enero_2023, muertes_tagua_cartagena, muertes_gaviota_12_feb_2023):
     sal = open('resultado.txt', 'w')
     sal.write('Autores: Victor Farias - Diego Saldana'+'\n\n')
     sal.write('cantidad de aves muertas por region:'+'\n\n')
     for aves_reg in pajaros_regiones:
         muertes = pajaros_regiones[aves_reg]
-        sal.write('Region: ' + aves_reg + ', Muertes: ' + str(muertes) + '\n')
+        sal.write('  '' Region: ' + aves_reg + ', Muertes: ' + str(muertes) + '\n\n')
     
     sal.write('Casos aves muertas mes de enero del ano 2023: '+ str(muertes_enero_2023)+'\n\n')
     sal.write('En la comuna de Cartagena se detectaron '+str(muertes_tagua_cartagena)+' Taguas muertas'+'\n\n')
     sal.write('Las muertes detectadas para el 12 de febrero del 2023 de la especie Gaviota garuma son: '+str(muertes_gaviota_12_feb_2023)+'\n\n')
     sal.close()
+   
    
 
 
@@ -156,4 +130,4 @@ if __name__ == "__main__":
     genera_salida(pajaros_regiones, muertes_enero_2023, muertes_tagua_cartagena, muertes_gaviota_12_feb_2023)
     
 # Generamos la salida
-print(genera_salida)
+print()
