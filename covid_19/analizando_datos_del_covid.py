@@ -29,8 +29,6 @@ def funcion_c(datos):
         if mes not in casos_mes:
             casos_mes[mes] = 0
         casos_mes[mes] += casos
-    
-    
     return casos_mes
 
 
@@ -48,4 +46,4 @@ if __name__== "__main__":
     casos_por_mes= funcion_c(covid)
     datos_grafica=funcion_d(covid)
 
-print(ultimo_dia_registrado)
+print(casos_por_mes)
