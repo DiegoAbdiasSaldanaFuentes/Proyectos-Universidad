@@ -3,7 +3,6 @@ edad= int(input("introduzca su edad: "))
 nivel_hemoglobina= float(input("introduzca su nivel de hemoglobina: "))
 escala_edad= str(input("introdusca su escala de edad 0 para mes 1 para año: "))
 genero= str(input("introdusca su genero 0 para hombre y 1 para mujer: "))
-
 if escala_edad == "0":
         if  edad <= 1:
             minimo,maximo= 13, 26
