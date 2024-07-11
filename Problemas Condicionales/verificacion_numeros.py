@@ -1,3 +1,5 @@
+#comprueba si el numero entregado es negativo, positivo o es  cero
+
 numero= float(input("ingresa un numero:"))
 
 if numero <0:

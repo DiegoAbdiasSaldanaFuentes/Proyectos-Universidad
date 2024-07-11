@@ -1,4 +1,4 @@
-#un programa para clasificar edades
+#un programa para clasificar edades y que retorne si es un bebé, niño, adolecente o un anciano
 
 edad= int(input("ingrese la edad que desea clasificar:")) 
 
@@ -10,7 +10,5 @@ elif edad <=17:
     print("es un adolecente")
 elif edad <= 64:
     print("es un adulto")
-elif edad <64:
-    print("es un anciano")
 else:
-    print("la edad no es vaida")
+    print("es un anciano")
