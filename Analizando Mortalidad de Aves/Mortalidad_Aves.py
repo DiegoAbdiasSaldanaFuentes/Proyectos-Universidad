@@ -1,4 +1,4 @@
-
+#ESTE CODIGO ESTA MALO
 
 #importamos el matplotlib para poder hacer  un grafico de barras
 import matplotlib.pyplot as plt
