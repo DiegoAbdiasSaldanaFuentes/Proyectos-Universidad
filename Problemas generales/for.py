@@ -1,4 +1,4 @@
-numero_1 = int(input("ingrese un numero:"))
+"""numero_1 = int(input("ingrese un numero:"))
 numero_2 = int(input("ingrese un numero:"))
 operador = str(input("ingrese un oeprador 'sum', 'mult', 'rest', 'divi':")).lower()
 def calculadora (numero_1, numero_2, operador):
@@ -18,5 +18,19 @@ def calculadora (numero_1, numero_2, operador):
 resultado = calculadora(numero_1, numero_2, operador)
 
 print(resultado)
-  
+  """
+#impar o par
+"""numero = int(input("ingrese un numero:"))
+if numero % 2== 0:
+    print("es par")      
+else:
+    print("es impar")  """
+
+for i in range(1,100):
+    if i % 2 == 0:
+        print(f"{i} es par ")
+    else:
+        print(f"{i} es impar")
+
+
 

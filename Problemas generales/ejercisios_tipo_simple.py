@@ -67,10 +67,27 @@ print("tu paga es", paga)"""
 #  introducida por el usuario. Después el programa debe calcular y mostrar por pantalla la cantidad de ahorros 
 # tras el primer, segundo y tercer años. Redondear cada cantidad a dos decimales.
 
-dinero = float(input("ingrese su cantidad de dinero depositada en su cuenta de ahorro:"))
-año1 = int(input("ingrese su cantidad de años:"))
-ahorro  = 0.04
-cobro_anual = dinero * ahorro
-años = round(año1 * cobro_anual)
-print(f"su cuenta de ahorro es{años}")
+#resutado malo
+#dinero = float(input("ingrese su cantidad de dinero depositada en su cuenta de ahorro:"))
+#año1 = int(input("ingrese su cantidad de años:"))
+#ahorro  = 0.04
+#cobro_anual = dinero * ahorro
+#años = round(año1 * cobro_anual)
+#print(f"su cuenta de ahorro es:{años}")
+
+#RESULTADO DE LA PAGINA: 
+#inversion = float(input("Introduce la inversión inicial: "))
+#interes = 0.04
+#balance1 = inversion * (1 + interes)
+#print("Balance tras el primer año:" + str(round(balance1, 2)))
+#balance2 = balance1 * (1 + interes)
+#print("Balance tras el segundo año:" + str(round(balance2, 2)))
+#balance3 = balance2 * (1 + interes)
+#print("Balance tras el tercer año:" + str(round(balance3, 2)))
+
+#Ejersicio : Una panadería vende barras de pan a 3.49€ cada una.
+#  El pan que no es el día tiene un descuento del 60%. 
+# Escribir un programa que comience leyendo el número de barras vendidas que no son del día. 
+# Después el programa debe mostrar el precio habitual de una barra de pan, 
+# el descuento que se le hace por no ser fresca y el coste final total.
 

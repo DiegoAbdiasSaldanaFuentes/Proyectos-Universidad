@@ -41,20 +41,21 @@ def afp_seleccion(afp,base_imponible):
 def total_pagar(base_imponible,cotizacion_afp,cotizacion_fonasa):
     a_pago= base_imponible-cotizacion_afp-cotizacion_fonasa    
     return a_pago
-                
-limpiar_pantalla()
-nombre, sueldo_base, afp, meses, hijos =  entrega_datos()
-bonificacion_meses,asignacion_familiar,base_imponible=calcular_base_imponible(sueldo_base, hijos, meses)
-cotizacion_fonasa = fonasa(base_imponible)
-cotizacion_afp = afp_seleccion(afp, base_imponible)
-a_pago = total_pagar(base_imponible, cotizacion_afp ,cotizacion_fonasa)
 
-print(f"Nombre: {nombre}")
-print(f"Sueldo Base: ${sueldo_base:.2f}")
-print(f"Bonificación Meses: ${bonificacion_meses:.2f}")
-print(f"Asignación Familiar: ${asignacion_familiar:.2f}")
-print(f"Base Imponible: ${base_imponible:.2f}")
-print(f"Cotización Fonasa: ${cotizacion_fonasa:.2f}")
-print(f"Cotización AFP: ${cotizacion_afp:.2f}")
-print(f"A pagar: ${a_pago:.2f}")
+if __name__ == "__main__":           
+    limpiar_pantalla()
+    nombre, sueldo_base, afp, meses, hijos =  entrega_datos()
+    bonificacion_meses,asignacion_familiar,base_imponible=calcular_base_imponible(sueldo_base, hijos, meses)
+    cotizacion_fonasa = fonasa(base_imponible)
+    cotizacion_afp = afp_seleccion(afp, base_imponible)
+    a_pago = total_pagar(base_imponible, cotizacion_afp ,cotizacion_fonasa)
+
+    print(f"Nombre: {nombre}")
+    print(f"Sueldo Base: ${sueldo_base:.2f}")
+    print(f"Bonificación Meses: ${bonificacion_meses:.2f}")
+    print(f"Asignación Familiar: ${asignacion_familiar:.2f}")
+    print(f"Base Imponible: ${base_imponible:.2f}")
+    print(f"Cotización Fonasa: ${cotizacion_fonasa:.2f}")
+    print(f"Cotización AFP: ${cotizacion_afp:.2f}")
+    print(f"A pagar: ${a_pago:.2f}")
 
