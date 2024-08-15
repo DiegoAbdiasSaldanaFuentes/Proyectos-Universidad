@@ -1,3 +1,5 @@
+import random
+
 """numero_1 = int(input("ingrese un numero:"))
 numero_2 = int(input("ingrese un numero:"))
 operador = str(input("ingrese un oeprador 'sum', 'mult', 'rest', 'divi':")).lower()
@@ -26,11 +28,11 @@ if numero % 2== 0:
 else:
     print("es impar")  """
 
-for i in range(1,100):
-    if i % 2 == 0:
+#ve del 1 al  100 si es par o impar
+"""for i in range(1,101):
+    if i % 2 == 0:    
         print(f"{i} es par ")
     else:
         print(f"{i} es impar")
-
-
+"""
 

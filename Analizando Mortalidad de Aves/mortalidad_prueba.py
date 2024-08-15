@@ -13,7 +13,7 @@ def lectura_datos (archivo):
     return datos
 
 def funcion_a (datos):
-    
+    pass
 
 
 if __name__ =="__main__":

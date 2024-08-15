@@ -33,9 +33,17 @@
 
 #EJERCISIO: Escribir un programa que pida al usuario un número entero y muestre por pantalla si es par o impar.
 
-numero = int(input("ingresa un numero:"))
-if numero % numero != 0:
-    print("es impar")
-else:
-    print("es par")
+#MI RESPUESTA (MAL)
+#numero = int(input("ingresa un numero:"))
+#if numero % numero != 0:
+    #print("es impar")
+#else:
+    #print("es par")
+
+#RESPUESTA
+#n = int(input("Introduce un número entero: "))
+#if n % 2 == 0:
+    #print("El número " + str(n) + " es par")
+#else:
+    #print("El número " + str(n) + " es impar")
 
