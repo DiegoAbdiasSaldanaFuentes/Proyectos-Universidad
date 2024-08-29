@@ -1,0 +1,29 @@
+Coaliziones:
+
+Coalicion:c1
+ p1-p2-p31-p3
+
+Coalicion:c2
+ p4-p5
+
+Coalicion:c3
+ p6-p310-p7
+
+Total coalicion:
+['p1', 1]
+Total coalicion:
+['p2', 1]
+Total coalicion:
+['p31', 1]
+Total coalicion:
+['p3', 3]
+Total coalicion:
+['p4', 4]
+Total coalicion:
+['p5', 1]
+Total coalicion:
+['p6', 2]
+Total coalicion:
+['p310', 1]
+Total coalicion:
+['p7', 0]
