@@ -27,7 +27,8 @@ ventana.title("Calculadora")
 # Font es el tamaño donde se veran los numeros
 # Borderwidth añade un borde donde ingresas los numeros
 entrada = tk.Entry(ventana, width=16, font=('Arial', 24), borderwidth=9, relief='ridge')
-entrada.grid(row=0, column=7, columnspan=4)
+# row si se pone otro numero que no sea 0 no se vera
+entrada.grid(row=0, column=0, columnspan=4)
 
 # Crear botones
 #el orden de la lista es igual a la interfaz, quizas aqui se hacen las pociones; si, si se cambia un numero  cambia la interfaz y el resultado
