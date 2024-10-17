@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html> <!--con html empezamos con la pagina sin este la pagina no estaria bien estructurada, osea funcionaria pero no siguiendo los protocolos-->
+<head>
+    <title>Formularios</title>
+</head> 
+<body><!--el tag body sera e cuerpo de la pagina y todo en si, estara todo lo que necesitara la pagina sin mencionar que es el más importante-->
+    <!--con el tag <form> podremos crear un formulario y ingresar los siguientes campos-->
+    <form>
+        <!--con los input podemos crear todo lo que vendria siendo campos donde el cliente deba colocar datos-->
+        <!--para especificar que tipo de entrada queremos osea si de contraseña o usuarios usamos "TYPE"-->
+        <!--usando el type="text" nos creara  un bloque de texto-->
+        <!--required name hara que el campo sea "obligatorio" que no se pueda saltar-->
+        <!--usando el "Placeholder" hara que al campo nos apareca un texto el que deseemos como "ESCRIBE TU NOMBRE"-->
+        <!--el minlenght podemos ingresar un minimo de caracteres que deseemos-->
+        <input type="text" required name="username" placeholder="ESCRIBE TU NOMBRE" minlength="3">
+        <input type="email"name="correo" required placeholder="INGRESA TU EMAIL">
+        <input type="password" required placeholder="INGRESE SU CONTRASEÑA">
+        <!--"checkbox" nos permite crear un cuadrado que al presionarlo ingresara un tick de hecho o listo-->
+        <input type="checkbox">
+        <!--con "Radio" ingresara algo igua como el checkbox pero con circulo y al presionarlo se rellenara-->
+        <input type="radio">
+        <!--con "Submit" agregara un campo de enviar, nos sirve si creamo un (formulario de google) y necesitas enviarlo-->
+        <input type="submit">
+        <!--con "File" podremos seleccionar un archivo de nuestro ordenador y para enviarlo o cualquier proposito qeu necesitemos-->
+        <input type="file">
+        <!--y con "date" podremo crear un calendario-->
+        <input type="date">
+
+    </form>
+    
+</body>
+</html>

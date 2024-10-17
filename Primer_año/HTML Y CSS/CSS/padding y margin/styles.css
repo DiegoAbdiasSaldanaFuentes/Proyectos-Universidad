@@ -1,4 +1,23 @@
-.box{
+.box1{/*con . hacemos llamar la clase o lo que queremos llamar para modificarlo en este caso .box1*/
+    
+    background: red;
+    padding: 50px;
+    height: 150px;
+    width: 150px;
+    margin: 10px;
+
+}
+
+.box2{
+    background: red;
+    padding: 50px;
+    height: 150px;
+    width: 150px;
+    margin: 10px;
+
+}
+
+.box3{
     background: red;
     padding: 50px;
     height: 150px;

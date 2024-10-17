@@ -27,10 +27,9 @@ while contador <= 10:
 
 
 #Algoritmo que cuente del 1 al 20 pero solo los numeros pares
-
-"""for numero in range(1,21):
+for numero in range(1,21):
     if numero % 2 != 1:
-        print(numero)"""
+        print(numero)
 
 #Algoritmo que calcule el factorial de "n" numero
 
