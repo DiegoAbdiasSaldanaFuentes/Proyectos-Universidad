@@ -19,7 +19,6 @@ console.log(personaje['anime']);
 personaje.edad = 13;
 // otra manera de modificar la edad
 personaje['edad'] = 16;
-
+// Eliminando propiedad
 delete personaje.anime;
-
 console.log(personaje)

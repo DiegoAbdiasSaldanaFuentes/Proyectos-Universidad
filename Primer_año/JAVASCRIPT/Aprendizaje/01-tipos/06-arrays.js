@@ -14,7 +14,7 @@ console.log(animales)
 console.log(animales[7])
 // tirara tipo objeto
 console.log(typeof animales)
-
+// devuelve la longitud de los elementos osea un len en python
 console.log(animales.length);
 
 

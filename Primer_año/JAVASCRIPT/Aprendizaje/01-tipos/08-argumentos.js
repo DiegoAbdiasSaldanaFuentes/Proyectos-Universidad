@@ -1,6 +1,7 @@
 // Funcion más flexible
 // La función recibe un parametro 
 function suma(a,b){
+    // metodo para ver los valores que estan almacenado en suma
     console.log(arguments);
     return a + b;
 }
